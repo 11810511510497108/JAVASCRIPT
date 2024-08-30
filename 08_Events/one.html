@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Event</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul class="images">
+            <li><img width="200px" height="150px" id="photoshop" src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1200" alt=""></li>
+            <li><img width="200px" id="beauterfly" src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1200" alt=""></li>
+            <li><img width="200px" id="confuse" src="https://images.pexels.com/photos/2291471/pexels-photo-2291471.jpeg?auto=compress&cs=tinysrgb&w=1200" alt=""></li>
+            <li><img width="200px" id="setup" src="https://images.pexels.com/photos/3937174/pexels-photo-3937174.jpeg?auto=compress&cs=tinysrgb&w=1200" alt=""></li>
+            <li><img width="200px" id="chaiAurwork" src="https://images.pexels.com/photos/935743/pexels-photo-935743.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" onclick="alert('ChaiAurWork')"></li>
+            <li><img width="200px" id="Keyboard" src="https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('setup').onclick = function() {
+    //     alert('click on setup');
+    // }
+
+    // document.getElementById('Keyboard').addEventListener('click', function(){
+    //     alert("click on keybord image");
+    // })
+
+    // document.getElementById('beauterfly').addEventListener('click', function() {
+    //     alert("click beauterfly image");
+    // })
+    
+    // type
+    // timestamp
+    // defaultprevented
+    //target
+    // toElement
+    // srcElement
+    // currentTarget
+
+//     document.getElementById('photoshop').addEventListener('click', function(e) {
+//         console.log(e);
+//     }, false)
+
+//    document.getElementById('google').addEventListener('click', function(e) {
+//     console.log("click google")
+//     e.preventDefault()
+//     e.stopPropagation()
+//    }, false)
+ 
+     document.querySelector('#photoshop').addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+        let removeIt  = e.target.parentNode
+        removeIt.remove()
+     },false)
+
+</script>
+</html>
